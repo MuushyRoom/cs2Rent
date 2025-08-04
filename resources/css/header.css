@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5rem;
+    
+}
+
+.header__title {
+    align-self: center;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.header__navbar {
+    display: flex;
+    gap: 2rem;
+    align-content: center;
+}
+
+.header__navbar-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.header__navbar-item {
+       cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: 800;
+    border: 1px solid black;
+    
+}
+
+* {
+    border: 1px solid black;
+}
