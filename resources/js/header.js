@@ -29,20 +29,37 @@ const skinCategories = {
 };
 
 // CHECK IF A USER CLICKED A LIST ITEM ON  THE NAVBAR
-headerItemContainer.addEventListener("click", function (e) {
-    const clickedElement = e.target;
+// headerItemContainer.addEventListener("click", function (e) {
+//     const clickedElement = e.target;
 
-    if (clickedElement.tagName === "LI") {
+//     if (clickedElement.tagName === "LI") {
+//         subHeaderItemContainer.classList.remove("hide");
+
+//         const type = clickedElement.innerText.toLowerCase();
+//         renderSkinTypes(type);
+//     } else {
+//         subHeaderItemContainer.classList.add("hide");
+//     }
+// });
+
+window.onclick = (e) => {
+    const parentElement = document.getElementById("subheader_list_container");
+
+    if (
+        e.target.className === "header__navbar-item" ||
+        parentElement.contains(e.target)
+    ) {
+        const clickedElement = e.target;
         subHeaderItemContainer.classList.remove("hide");
         const type = clickedElement.innerText.toLowerCase();
         renderSkinTypes(type);
     } else {
         subHeaderItemContainer.classList.add("hide");
     }
-});
+};
 
 const gunContainer = `
-  <ul class="subheader__list" id="subheader__gun">
+  <ul class="subheader__list animate__animated animate__bounceInLeft" id="subheader__gun">
     <li class="subheader__item-gun"><a href="gun/pistol">Pistol</a></li>
     <li class="subheader__item-gun"><a href="gun/smg">SMG</a></li>
     <li class="subheader__item-gun"><a href="gun/rifle">Rifle</a></li>
@@ -53,7 +70,7 @@ const gunContainer = `
 `;
 
 const knivesContainer = `
-<ul class="subheader__list" id="subheader__knives">
+<ul class="subheader__list animate__animated animate__bounceInLeft" id="subheader__knives">
     <li class="subheader__item-knives"><a href="knives/karambit">Karambit</a></li>
     <li class="subheader__item-knives"><a href="knives/butterfly-knife">Butterfly Knife</a></li>
     <li class="subheader__item-knives"><a href="knives/bayonet">Bayonet</a></li>
@@ -69,7 +86,7 @@ const knivesContainer = `
 
 const agentcontainer = `
 
-<ul class="subheader__list" id="subheader__agent">
+<ul class="subheader__list animate__animated animate__bounceInLeft" id="subheader__agent">
     <li class="subheader__item-agent"><a href="agent/terrorist">Terrorist</a></li>
     <li class="subheader__item-agent"><a href="agent/counter-terrorist">Counter Terrorist</a></li>
 </ul>
@@ -81,13 +98,13 @@ function renderSkinTypes(type) {
 
     switch (type) {
         case "knives":
-          subHeaderItemContainer.innerHTML = knivesContainer;
+            subHeaderItemContainer.innerHTML = knivesContainer;
             break;
         case "gun skins":
             subHeaderItemContainer.innerHTML = gunContainer;
             break;
         case "agent skins":
-          subHeaderItemContainer.innerHTML = agentcontainer;
+            subHeaderItemContainer.innerHTML = agentcontainer;
             break;
     }
 }

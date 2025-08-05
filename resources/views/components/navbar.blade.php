@@ -7,7 +7,6 @@
 
         <li class="header__navbar-item">Agent Skins</li>
         <li class="header__navbar-item">Gun Skins</li>
-        <li class="header__navbar-item" style="color: red;text-decoration:line-through;">Gloves(n/a)</li>
     </ul>
     <ul class="header__navbar-list">
         @if ($isGuest)
