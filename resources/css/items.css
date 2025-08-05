@@ -1,0 +1,26 @@
+.items__container {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+.items__list-container {
+    display: flex;
+    list-style-type: none;
+    overflow: auto;
+    gap: 15px;
+    padding: 10px;
+}
+
+.list__item {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+.item__img {
+    height: 200px;
+}
+.item__name {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
