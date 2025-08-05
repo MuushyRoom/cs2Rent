@@ -1,4 +1,10 @@
-.header {
+header{
+    position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+section {
     display: flex;
     justify-content: space-between;
     padding: 20px 5rem;

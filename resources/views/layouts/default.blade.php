@@ -15,23 +15,28 @@
 
 <body>
     <header class="header">
-        <h1 class="header__title">cs2Rent</h1>
+        <section>
+            
+            <h1 class="header__title"><a href="/skins">cs2Rent</a></h1>
 
-        <x-navbar>
+            <x-navbar>
 
-        </x-navbar>
+            </x-navbar>
+        </section>
+
+        <nav class="hide" id="subheader_list_container">
+
+
+        </nav>
     </header>
-    <nav class="hide" id="subheader_list_container">
 
-
-    </nav>
     <main>
-        @yield('mainContainer')
+        @yield('main-container')
 
 
     </main>
     <footer>
-
+        <h5>cs2 Skins for rent</h5>
     </footer>
 </body>
 

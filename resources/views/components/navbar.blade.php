@@ -10,8 +10,8 @@
     </ul>
     <ul class="header__navbar-list">
         @if ($isGuest)
-            <li class="header__navbar-item"><a class="header__navbar-link" href="">Login</a></li>
-            <li class="header__navbar-item"><a class="header__navbar-link" href="">Register</a></li>
+            <li class="header__navbar-item"><a class="header__navbar-link" href="/">Login</a></li>
+            <li class="header__navbar-item"><a class="header__navbar-link" href="/">Register</a></li>
         @else
             <li class="header__navbar-item"><a class="header__navbar-link" href="">Rented Skins</a></li>
             <li class="header__navbar-item"><a class="header__navbar-link" href="">Account</a></li>

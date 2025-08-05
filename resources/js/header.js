@@ -28,19 +28,6 @@ const skinCategories = {
     ],
 };
 
-// CHECK IF A USER CLICKED A LIST ITEM ON  THE NAVBAR
-// headerItemContainer.addEventListener("click", function (e) {
-//     const clickedElement = e.target;
-
-//     if (clickedElement.tagName === "LI") {
-//         subHeaderItemContainer.classList.remove("hide");
-
-//         const type = clickedElement.innerText.toLowerCase();
-//         renderSkinTypes(type);
-//     } else {
-//         subHeaderItemContainer.classList.add("hide");
-//     }
-// });
 
 window.onclick = (e) => {
     const parentElement = document.getElementById("subheader_list_container");
@@ -60,35 +47,35 @@ window.onclick = (e) => {
 
 const gunContainer = `
   <ul class="subheader__list animate__animated animate__bounceInLeft" id="subheader__gun">
-    <li class="subheader__item-gun"><a href="gun/pistol">Pistol</a></li>
-    <li class="subheader__item-gun"><a href="gun/smg">SMG</a></li>
-    <li class="subheader__item-gun"><a href="gun/rifle">Rifle</a></li>
-    <li class="subheader__item-gun"><a href="gun/sniper">Sniper</a></li>
-    <li class="subheader__item-gun"><a href="gun/shotgun">Shotgun</a></li>
-    <li class="subheader__item-gun"><a href="gun/heavy">Heavy</a></li>
+    <li class="subheader__item-gun"><a href="skins/gun/pistol">Pistol</a></li>
+    <li class="subheader__item-gun"><a href="skins/gun/smg">SMG</a></li>
+    <li class="subheader__item-gun"><a href="skins/gun/rifle">Rifle</a></li>
+    <li class="subheader__item-gun"><a href="skins/gun/sniper">Sniper</a></li>
+    <li class="subheader__item-gun"><a href="skins/gun/shotgun">Shotgun</a></li>
+    <li class="subheader__item-gun"><a href="skins/gun/heavy">Heavy</a></li>
 </ul>
 `;
 
 const knivesContainer = `
 <ul class="subheader__list animate__animated animate__bounceInLeft" id="subheader__knives">
-    <li class="subheader__item-knives"><a href="knives/karambit">Karambit</a></li>
-    <li class="subheader__item-knives"><a href="knives/butterfly-knife">Butterfly Knife</a></li>
-    <li class="subheader__item-knives"><a href="knives/bayonet">Bayonet</a></li>
-    <li class="subheader__item-knives"><a href="knives/m9-bayonet">M9 Bayonet</a></li>
-    <li class="subheader__item-knives"><a href="knives/flip-knife">Flip Knife</a></li>
-    <li class="subheader__item-knives"><a href="knives/huntsman-knife">Huntsman Knife</a></li>
-    <li class="subheader__item-knives"><a href="knives/shadow-daggers">Shadow Daggers</a></li>
-    <li class="subheader__item-knives"><a href="knives/bowie-knife">Bowie Knife</a></li>
-    <li class="subheader__item-knives"><a href="knives/falchion-knife">Falchion Knife</a></li>
-    <li class="subheader__item-knives"><a href="knives/classic-knife">Classic Knife</a></li>
+    <li class="subheader__item-knives"><a href="skins/knives/karambit">Karambit</a></li>
+    <li class="subheader__item-knives"><a href="skins/knives/butterfly-knife">Butterfly Knife</a></li>
+    <li class="subheader__item-knives"><a href="skins/knives/bayonet">Bayonet</a></li>
+    <li class="subheader__item-knives"><a href="skins/knives/m9-bayonet">M9 Bayonet</a></li>
+    <li class="subheader__item-knives"><a href="skins/knives/flip-knife">Flip Knife</a></li>
+    <li class="subheader__item-knives"><a href="skins/knives/huntsman-knife">Huntsman Knife</a></li>
+    <li class="subheader__item-knives"><a href="skins/knives/shadow-daggers">Shadow Daggers</a></li>
+    <li class="subheader__item-knives"><a href="skins/knives/bowie-knife">Bowie Knife</a></li>
+    <li class="subheader__item-knives"><a href="skins/knives/falchion-knife">Falchion Knife</a></li>
+    <li class="subheader__item-knives"><a href="skins/knives/classic-knife">Classic Knife</a></li>
 </ul>
 `;
 
 const agentcontainer = `
 
 <ul class="subheader__list animate__animated animate__bounceInLeft" id="subheader__agent">
-    <li class="subheader__item-agent"><a href="agent/terrorist">Terrorist</a></li>
-    <li class="subheader__item-agent"><a href="agent/counter-terrorist">Counter Terrorist</a></li>
+    <li class="subheader__item-agent"><a href="skins/agent/terrorist">Terrorist</a></li>
+    <li class="subheader__item-agent"><a href="skins/agent/counter-terrorist">Counter Terrorist</a></li>
 </ul>
 
 `;

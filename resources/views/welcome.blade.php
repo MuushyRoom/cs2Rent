@@ -1,1 +1,1 @@
-@extends('layouts.default')
+<a href="/skins">Check available skins</a>

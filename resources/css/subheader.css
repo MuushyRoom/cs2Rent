@@ -3,7 +3,11 @@
 }
 
 #subheader_list_container {
+    justify-self: center;
+    position: fixed;
+    width: 100%;
     padding: 15px;
+    flex: 1;
 }
 #subheader_list_container ul {
     display: flex;
