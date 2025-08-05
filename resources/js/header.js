@@ -1,18 +1,34 @@
 const headerItemContainer = document.getElementById("header_skins_selection");
-const subHeaderItemContainer = document.getElementById("subheader_list_container");
+const subHeaderItemContainer = document.getElementById(
+    "subheader_list_container"
+);
+
 const skinCategories = {
- pistol: ["USP-S", "P2000", "Five-SeveN", "Glock-18", "Tec-9", "CZ75-Auto", "Desert Eagle", "P250", "Dual Berettas", "R8 Revolver"],
-  smg: ["MP9", "MAC-10", "MP7", "MP5-SD", "P90", "PP-Bizon", "UMP-45"],
-  rifle: ["AK-47", "M4A1-S", "M4A4", "FAMAS", "Galil AR", "AUG", "SG 553"],
-  sniper: ["AWP", "SSG 08", "SCAR-20", "G3SG1"],
-  shotgun: ["Nova", "XM1014", "MAG-7", "Sawed-Off"],
-  heavy: ["Negev", "M249"],
-  knives: ["Karambit", "Butterfly Knife", "Bayonet", "M9 Bayonet", "Flip Knife", "Huntsman Knife", "Shadow Daggers", "Bowie Knife", "Falchion Knife", "Classic Knife"]
+    gunSkins: [
+        "pistol",
+        "smg",
+        "rifle",
+        "sniper",
+        "shotgun",
+        "heavy",
+        "knife",
+        "grenade",
+    ],
+    knives: [
+        "Karambit",
+        "Butterfly Knife",
+        "Bayonet",
+        "M9 Bayonet",
+        "Flip Knife",
+        "Huntsman Knife",
+        "Shadow Daggers",
+        "Bowie Knife",
+        "Falchion Knife",
+        "Classic Knife",
+    ],
 };
 
-console.log(headerItemContainer);
-console.log(subHeaderItemContainer);
-
+// CHECK IF A USER CLICKED A LIST ITEM ON  THE NAVBAR
 headerItemContainer.addEventListener("click", function (e) {
     const clickedElement = e.target;
 
@@ -25,23 +41,53 @@ headerItemContainer.addEventListener("click", function (e) {
     }
 });
 
+const gunContainer = `
+  <ul class="subheader__list" id="subheader__gun">
+    <li class="subheader__item-gun"><a href="gun/pistol">Pistol</a></li>
+    <li class="subheader__item-gun"><a href="gun/smg">SMG</a></li>
+    <li class="subheader__item-gun"><a href="gun/rifle">Rifle</a></li>
+    <li class="subheader__item-gun"><a href="gun/sniper">Sniper</a></li>
+    <li class="subheader__item-gun"><a href="gun/shotgun">Shotgun</a></li>
+    <li class="subheader__item-gun"><a href="gun/heavy">Heavy</a></li>
+</ul>
+`;
 
-function renderSkinTypes(type) {   
-const itemContainer = document.getElementById('subheader__skin-types');    
-switch (type){
+const knivesContainer = `
+<ul class="subheader__list" id="subheader__knives">
+    <li class="subheader__item-knives"><a href="knives/karambit">Karambit</a></li>
+    <li class="subheader__item-knives"><a href="knives/butterfly-knife">Butterfly Knife</a></li>
+    <li class="subheader__item-knives"><a href="knives/bayonet">Bayonet</a></li>
+    <li class="subheader__item-knives"><a href="knives/m9-bayonet">M9 Bayonet</a></li>
+    <li class="subheader__item-knives"><a href="knives/flip-knife">Flip Knife</a></li>
+    <li class="subheader__item-knives"><a href="knives/huntsman-knife">Huntsman Knife</a></li>
+    <li class="subheader__item-knives"><a href="knives/shadow-daggers">Shadow Daggers</a></li>
+    <li class="subheader__item-knives"><a href="knives/bowie-knife">Bowie Knife</a></li>
+    <li class="subheader__item-knives"><a href="knives/falchion-knife">Falchion Knife</a></li>
+    <li class="subheader__item-knives"><a href="knives/classic-knife">Classic Knife</a></li>
+</ul>
+`;
 
-       case "knives":
-             
-              skinCategories.knives.map((item)=>{
-                const uriValue = item.trim().toLowerCase();     
-                itemContainer.innerHTML += `
-                <li><a href="knives/${uriValue}">${item}</a></li>
-                `;   
-              });
-       break;
+const agentcontainer = `
 
+<ul class="subheader__list" id="subheader__agent">
+    <li class="subheader__item-agent"><a href="agent/terrorist">Terrorist</a></li>
+    <li class="subheader__item-agent"><a href="agent/counter-terrorist">Counter Terrorist</a></li>
+</ul>
 
+`;
 
+function renderSkinTypes(type) {
+    console.log(type);
 
-}
+    switch (type) {
+        case "knives":
+          subHeaderItemContainer.innerHTML = knivesContainer;
+            break;
+        case "gun skins":
+            subHeaderItemContainer.innerHTML = gunContainer;
+            break;
+        case "agent skins":
+          subHeaderItemContainer.innerHTML = agentcontainer;
+            break;
+    }
 }

@@ -1,0 +1,18 @@
+.hide {
+    display: none;
+}
+
+#subheader_list_container {
+    padding: 15px;
+}
+#subheader_list_container ul {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-direction: row;
+}
+#subheader_list_container li {
+    font-size: 1rem;
+    font-weight: 800;
+    color: black;
+}

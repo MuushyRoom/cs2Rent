@@ -10,7 +10,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-    @vite(['resources/css/app.css', 'resources/css/header.css', 'resources/js/header.js'])
+    @vite(['resources/css/app.css', 'resources/css/header.css','resources/css/subheader.css', 'resources/js/header.js'])
 </head>
 
 <body>
@@ -22,10 +22,7 @@
         </x-navbar>
     </header>
     <nav class="hide" id="subheader_list_container">
-
-        <ul class="subheader__skin-types" id="subheader__skin-types">
-          
-        </ul>
+       
 
     </nav>
     <main>
